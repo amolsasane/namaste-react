@@ -10,3 +10,4 @@ tmp
 node_modules
 dist
 .parcel-cache
+.trunk
