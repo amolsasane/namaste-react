@@ -32,6 +32,13 @@ body {
   padding: 0;
 }
 
+.nav-list > .nav-list-item {
+  display: inline;
+  padding: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
 .header-heading {
   color: green;
 }
