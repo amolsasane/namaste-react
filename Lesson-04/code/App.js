@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import myImage from "./Images/food-logo.png";
 
-function ResCard() {
+function ResCard(props) {
   return (
     <div className="resCard">
       <img
@@ -10,8 +10,8 @@ function ResCard() {
         alt="McDonald's"
         src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/405645b3118d83e89db4c65361e43733"
       />
-      <h3>McDonald's</h3>
-      <p>4.5</p>
+      <h3>{props.name}</h3>
+      <p>4.5 Stars</p>
       <p>Burger, Fries, Coke</p>
       <p>Delivery Time: 30m</p>
     </div>
@@ -47,6 +47,15 @@ function Main() {
         <button className="btn">Top Restaurents</button>
       </div>
       <div className="res-card-container">
+        <ResCard name="McDonald's" />
+        <ResCard name="Dominoz" />
+        <ResCard />
+        <ResCard />
+        <ResCard />
+        <ResCard />
+        <ResCard />
+        <ResCard />
+        <ResCard />
         <ResCard />
       </div>
     </div>
