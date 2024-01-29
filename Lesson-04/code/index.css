@@ -15,8 +15,11 @@ body {
 }
 
 .btn {
-  margin: 2rem;
+  margin: 2rem auto;
   padding: 10px;
+  border-radius: 1rem;
+  display: block;
+  color: green;
 }
 
 .img-container {
