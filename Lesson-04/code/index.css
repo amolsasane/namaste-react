@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 10px 10px 10px lightgray;
+}
+
+.main {
+  margin: 0;
+  background-color: light gray;
+}
+
+.btn {
+  margin: 2rem;
+  padding: 10px;
+}
+
+.img-container {
+  width: 100px;
+}
+
+.img {
+  width: 100%;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.header-heading {
+  color: green;
+}
