@@ -1,5 +1,6 @@
 import ResCard from "./ResCard.js";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer.js";
 
 function Body() {
   const [restaurantsList, setRestaurantsList] = useState([]);
@@ -17,6 +18,11 @@ function Body() {
       result.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
   };
+
+  if (restaurantsList.length === 0) {
+    const shimmerArray = Array.from({length: 10}).map((_ , index) => <Shimmer key={index} />);
+    return <div className="shimmer-container">{shimmerArray}</div>;
+  }
 
   return (
     <div className="main">
