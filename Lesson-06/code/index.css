@@ -1,3 +1,8 @@
+:root {
+  --shimmer-primary-color: #f8f9fa;
+  --shimmer-secondary-color: #edf0f2;
+}
+
 body {
   margin: 0;
 }
@@ -100,4 +105,46 @@ body {
 .res-card-details {
   width: 100%;
   padding-left: 2px;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 300px;
+  margin: 2rem;
+  border-radius: 1rem;
+  background-color: var(--shimmer-primary-color);
+}
+
+.shimmer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.shimmer-card-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  background-color: var(--shimmer-secondary-color);
+}
+
+.shimmer-card-heading {
+  width: 5rem;
+  height: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  background-color: var(--shimmer-secondary-color);
+}
+
+.shimmer-card-line-a {
+  width: 10rem;
+  height: 8px;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: var(--shimmer-secondary-color);
 }
