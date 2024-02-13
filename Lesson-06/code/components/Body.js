@@ -19,12 +19,13 @@ function Body() {
     );
   };
 
-  if (restaurantsList.length === 0) {
-    const shimmerArray = Array.from({length: 10}).map((_ , index) => <Shimmer key={index} />);
-    return <div className="shimmer-container">{shimmerArray}</div>;
-  }
-
-  return (
+  return restaurantsList.length === 0 ? (
+    <div className="shimmer-container">
+      {Array.from({ length: 10 }).map((_, index) => (
+        <Shimmer key={index} />
+      ))}
+    </div>
+  ) : (
     <div className="main">
       <div className="btn-container">
         <button
