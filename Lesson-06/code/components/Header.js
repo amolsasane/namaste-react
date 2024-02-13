@@ -1,6 +1,10 @@
 import myImage from "../utils/images/food-logo.png";
+import { useState } from "react"
 
 function Header() {
+
+  const [loginBtn, setLoginBtn] = useState("Login");
+
   return (
     <div className="header">
       <div className="img-container">
@@ -16,6 +20,7 @@ function Header() {
           <li className="nav-list-item">Home</li>
           <li className="nav-list-item">Search</li>
           <li className="nav-list-item">Cart</li>
+          <button className="login-btn" onClick={() => { loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login")}}>{loginBtn}</button>
         </ul>
       </nav>
     </div>
