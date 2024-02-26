@@ -24,7 +24,6 @@ body {
   margin: 2rem auto;
   padding: 10px;
   border-radius: 1rem;
-  display: block;
   color: green;
 }
 
@@ -147,4 +146,27 @@ body {
   margin: 1rem;
   border-radius: 1rem;
   background-color: var(--shimmer-secondary-color);
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-container {
+  margin: 2rem;
+}
+
+.search-input {
+  padding: 10px;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  color: green;
+}
+
+.search-btn {
+  padding: 10px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: green;
 }
