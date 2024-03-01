@@ -1,0 +1,177 @@
+:root {
+  --shimmer-primary-color: #f8f9fa;
+  --shimmer-secondary-color: #edf0f2;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 10px 10px 10px lightgray;
+}
+
+.main {
+  margin: 0;
+  background-color: light gray;
+}
+
+.btn {
+  margin: 2rem auto;
+  padding: 10px;
+  border-radius: 1rem;
+  color: green;
+}
+
+.img-container {
+  width: 33%;
+}
+
+.heading-container {
+  width: 33%;
+}
+
+.nav-container {
+  width: 33%;
+}
+
+.img {
+  width: 80px;
+  margin: 1rem 0;
+}
+
+.nav-list {
+  list-style: none;
+  text-align: right;
+}
+
+.nav-list > .nav-list-item {
+  display: inline;
+  padding: 10px;
+  font-size: large;
+}
+
+.header-heading {
+  color: green;
+  text-align: center;
+}
+
+.resCard {
+  width: 200px;
+  height: 300px;
+  margin: 2rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.resCard:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 10px lightgray;
+}
+
+.res-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.resCard > h3 {
+  padding: 0 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.resCard > p {
+  margin: 6px 3px;
+}
+.res-address {
+  color: gray;
+}
+
+.res-card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.res-card-details {
+  width: 100%;
+  padding-left: 2px;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 300px;
+  margin: 2rem;
+  border-radius: 1rem;
+  background-color: var(--shimmer-primary-color);
+}
+
+.shimmer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.shimmer-card-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  background-color: var(--shimmer-secondary-color);
+}
+
+.shimmer-card-heading {
+  width: 5rem;
+  height: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  background-color: var(--shimmer-secondary-color);
+}
+
+.shimmer-card-line-a {
+  width: 10rem;
+  height: 8px;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: var(--shimmer-secondary-color);
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-container {
+  margin: 2rem;
+}
+
+.search-input {
+  padding: 10px;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  color: green;
+}
+
+.search-btn {
+  padding: 10px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: green;
+}
+
+.search-error-msg {
+  color: green;
+  text-align: center;
+}
