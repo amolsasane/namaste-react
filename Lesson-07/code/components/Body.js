@@ -59,8 +59,14 @@ function Body() {
           <button
             className="search-btn"
             onClick={() => {
-              let filteredRestaurent = restaurantsList.filter((res) =>
-                res.info.name.toLowerCase().includes(searchInput.toLowerCase())
+              let filteredRestaurent = restaurantsList.filter(
+                (res) =>
+                  res.info.name
+                    .toLowerCase()
+                    .includes(searchInput.toLowerCase()) ||
+                  res.info.cuisines.some((cuisine) =>
+                    cuisine.toLowerCase().includes(searchInput.toLowerCase())
+                  )
               );
 
               setSearchedRestaurents(filteredRestaurent);
