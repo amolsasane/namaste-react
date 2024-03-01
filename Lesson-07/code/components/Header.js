@@ -17,8 +17,8 @@ function Header() {
       <nav className="nav-container">
         <ul className="nav-list">
           <li className="nav-list-item">Home</li>
-          <li className="nav-list-item">Search</li>
-          <li className="nav-list-item">Cart</li>
+          <li className="nav-list-item">About</li>
+          <li className="nav-list-item">Contact</li>
           <button
             className="login-btn"
             onClick={() => {
