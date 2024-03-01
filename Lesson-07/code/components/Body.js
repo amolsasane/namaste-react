@@ -69,6 +69,10 @@ function Body() {
                   )
               );
 
+              filteredRestaurent.length === 0
+                ? setErrorMessage("No matching restaurants found!")
+                : setErrorMessage("");
+
               setSearchedRestaurents(filteredRestaurent);
             }}
           >
