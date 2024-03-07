@@ -1,4 +1,4 @@
-import RES_LOGO_LINK from "../utils/constants";
+import { RES_LOGO_LINK } from "../utils/constants";
 
 function ResCard(props) {
   const { resData } = props;
