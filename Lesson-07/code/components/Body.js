@@ -87,6 +87,7 @@ function Body() {
       <div className="res-card-container">
         {searchedRestaurents.map((restaurant) => (
           <Link
+            className="res-card-link"
             to={"/restaurant/" + restaurant.info.id}
             key={restaurant.info.id}
           >
