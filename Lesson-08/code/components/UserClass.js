@@ -5,8 +5,7 @@ class User extends React.Component {
     super(props);
 
     this.state = {
-      count: 1,
-      count2: 2,
+      count: 0,
     };
   }
   render() {
@@ -15,7 +14,15 @@ class User extends React.Component {
     return (
       <div className="user-coomponent-class">
         <h3>Count: {count}</h3>
-        <h3>Count 2: {count2} </h3>
+        <button
+          onClick={() => {
+            this.setState({
+              count: this.state.count + 1,
+            });
+          }}
+        >
+          Increase Count
+        </button>
         <h2>Name : {name}</h2>
         <h2>Location : {location}</h2>
       </div>
