@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import { SWIGGY_API } from "../utils/constants.js";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 function Body() {
   const [restaurantsList, setRestaurantsList] = useState([]);
@@ -25,6 +26,9 @@ function Body() {
       result.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
   };
+
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) return <h1>Oh.. You are offline!</h1>;
 
   return restaurantsList.length === 0 ? (
     <div className="shimmer-container">
