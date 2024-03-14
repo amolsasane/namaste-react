@@ -26,6 +26,9 @@ function Header() {
           <li className="nav-list-item">
             <Link to="/contact">Contact</Link>
           </li>
+          <li className="nav-list-item">
+            <Link to="/grocery">Grocery</Link>
+          </li>
           <button
             className="login-btn"
             onClick={() => {
