@@ -38,10 +38,10 @@ function Body() {
     </div>
   ) : (
     <div className="main">
-      <div className="filters-container">
+      <div className="flex m-6 justify-center items-center">
         <div className="btn-container">
           <button
-            className="btn"
+            className="bg-green-100 p-2 px-3 rounded-lg font-bold"
             onClick={() => {
               const topRatedRes = restaurantsList.filter(
                 (res) => res.info.avgRating > 4.2
@@ -53,15 +53,15 @@ function Body() {
           </button>
         </div>
 
-        <div className="search-container">
+        <div className="">
           <input
-            className="search-input"
+            className="bg-gray-100 border-gray-300 ml-4 mr-2 p-[4px] border-2 rounded-tl-full rounded-bl-full"
             type="text"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />
           <button
-            className="search-btn"
+            className="bg-blue-100 p-[5px] pr-[1rem] pl-[1rem] rounded-tr-full rounded-br-full"
             onClick={() => {
               let filteredRestaurent = restaurantsList.filter(
                 (res) =>
@@ -85,10 +85,12 @@ function Body() {
         </div>
       </div>
       <div className="error-msg-container">
-        <h1 className="search-error-msg">{errorMessage}</h1>
+        <h1 className="text-[2rem] font-bold text-red-500 text-center">
+          {errorMessage}
+        </h1>
       </div>
 
-      <div className="res-card-container">
+      <div className="flex flex-wrap justify-center">
         {searchedRestaurents.map((restaurant) => (
           <Link
             className="res-card-link"
