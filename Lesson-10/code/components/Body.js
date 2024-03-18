@@ -30,6 +30,33 @@ function Body() {
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) return <h1>Oh.. You are offline!</h1>;
 
+  function topRatedRestaurantBtn() {
+    const topRatedRes = restaurantsList.filter(
+      (res) => res.info.avgRating > 4.2
+    );
+    setRestaurantsList(topRatedRes);
+    console.log(topRatedRes);
+  }
+
+  function searchedRestaurentBbtn() {
+    {
+      const filteredRestaurent = restaurantsList.filter(
+        (res) =>
+          res.info.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+          res.info.cuisines.some((cuisine) =>
+            cuisine.toLowerCase().includes(searchInput.toLowerCase())
+          )
+      );
+
+      filteredRestaurent.length === 0
+        ? setErrorMessage("No matching restaurants found!")
+        : setErrorMessage("");
+
+      setSearchedRestaurents(filteredRestaurent);
+      console.log(filteredRestaurent);
+    }
+  }
+
   return restaurantsList.length === 0 ? (
     <div className="shimmer-container">
       {Array.from({ length: 10 }).map((_, index) => (
@@ -43,10 +70,7 @@ function Body() {
           <button
             className="bg-green-100 p-2 px-3 rounded-lg font-bold"
             onClick={() => {
-              const topRatedRes = restaurantsList.filter(
-                (res) => res.info.avgRating > 4.2
-              );
-              setRestaurantsList(topRatedRes);
+              topRatedRestaurantBtn();
             }}
           >
             Top Rated Restaurents
@@ -63,21 +87,7 @@ function Body() {
           <button
             className="bg-blue-100 p-[5px] pr-[1rem] pl-[1rem] rounded-tr-full rounded-br-full"
             onClick={() => {
-              let filteredRestaurent = restaurantsList.filter(
-                (res) =>
-                  res.info.name
-                    .toLowerCase()
-                    .includes(searchInput.toLowerCase()) ||
-                  res.info.cuisines.some((cuisine) =>
-                    cuisine.toLowerCase().includes(searchInput.toLowerCase())
-                  )
-              );
-
-              filteredRestaurent.length === 0
-                ? setErrorMessage("No matching restaurants found!")
-                : setErrorMessage("");
-
-              setSearchedRestaurents(filteredRestaurent);
+              searchedRestaurentBbtn();
             }}
           >
             Search
