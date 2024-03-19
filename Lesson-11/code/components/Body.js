@@ -1,4 +1,4 @@
-import ResCard from "./ResCard.js";
+import ResCard, { WithLabel } from "./ResCard.js";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import { SWIGGY_API } from "../utils/constants.js";
@@ -10,6 +10,8 @@ function Body() {
   const [searchedRestaurents, setSearchedRestaurents] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
+  const FreeDelivery = WithLabel(ResCard);
 
   useEffect(() => {
     fetchData();
@@ -56,7 +58,7 @@ function Body() {
       console.log(filteredRestaurent);
     }
   }
-
+  console.log(SWIGGY_API);
   return restaurantsList.length === 0 ? (
     <div className="shimmer-container">
       {Array.from({ length: 10 }).map((_, index) => (
@@ -107,7 +109,11 @@ function Body() {
             to={"/restaurant/" + restaurant.info.id}
             key={restaurant.info.id}
           >
-            <ResCard resData={restaurant} />
+            {restaurant?.info?.avgRating > 4.2 ? (
+              <FreeDelivery resData={restaurant} />
+            ) : (
+              <ResCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

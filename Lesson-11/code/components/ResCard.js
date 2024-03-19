@@ -19,4 +19,17 @@ function ResCard(props) {
   );
 }
 
+export const WithLabel = (ResCard) => {
+  return (props) => {
+    return (
+      <div className="relative">
+        <label className="absolute bg-orange-500 text-white p-2 rounded-tl-sm rounded-bl-sm rounded-tr-lg rounded-br-lg   z-10">
+          Free Delivery
+        </label>
+        <ResCard {...props} />
+      </div>
+    );
+  };
+};
+
 export default ResCard;
