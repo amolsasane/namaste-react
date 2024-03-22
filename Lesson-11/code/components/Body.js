@@ -37,7 +37,6 @@ function Body() {
       (res) => res.info.avgRating > 4.2
     );
     setRestaurantsList(topRatedRes);
-    console.log(topRatedRes);
   }
 
   function searchedRestaurentBbtn() {
@@ -55,10 +54,8 @@ function Body() {
         : setErrorMessage("");
 
       setSearchedRestaurents(filteredRestaurent);
-      console.log(filteredRestaurent);
     }
   }
-  console.log(SWIGGY_API);
   return restaurantsList.length === 0 ? (
     <div className="shimmer-container">
       {Array.from({ length: 10 }).map((_, index) => (

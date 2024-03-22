@@ -1,11 +1,13 @@
 import { MENU_ITEM_API } from "../utils/constants";
 
 const MenuItemList = ({ items }) => {
-  console.log(items);
   return (
     <div>
       {items.map((item) => (
-        <div className="flex justify-between pt-4 pb-5 px-3 border-t-2">
+        <div
+          key={item.card.info.id}
+          className="flex justify-between pt-4 pb-5 px-3 border-t-2"
+        >
           <div className="w-[80%] mr-5">
             <p className="font-bold">{item.card.info.name}</p>
             <p className="mb-2">₹ {item.card.info.price / 100}</p>
