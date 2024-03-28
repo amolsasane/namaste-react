@@ -1,11 +1,9 @@
 import MenuItemList from "./MenuItemList";
 import { useState } from "react";
 
-const Catagory = ({ data }) => {
-  const [showItems, setShowItems] = useState(false);
-
+const Catagory = ({ data, showItems, setShowIndex }) => {
   function clickHandler() {
-    setShowItems(!showItems);
+    setShowIndex();
   }
 
   return (
