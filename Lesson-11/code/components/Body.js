@@ -63,9 +63,9 @@ function Body() {
       ))}
     </div>
   ) : (
-    <div className="main">
+    <div className="main max-w-[70rem] m-auto">
       <div className="flex m-6 justify-center items-center">
-        <div className="btn-container">
+        <div className="btn-container m-4">
           <button
             className="bg-green-100 p-2 px-3 rounded-lg font-bold"
             onClick={() => {
