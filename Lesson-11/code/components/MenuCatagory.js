@@ -1,5 +1,4 @@
 import MenuItemList from "./MenuItemList";
-import { useState } from "react";
 
 const Catagory = ({ data, showItems, setShowIndex }) => {
   function clickHandler() {

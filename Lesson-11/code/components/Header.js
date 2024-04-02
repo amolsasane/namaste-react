@@ -1,9 +1,11 @@
 import myImage from "../utils/images/food-logo.png";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 function Header() {
   const [loginBtn, setLoginBtn] = useState("Login");
+  const { loggedInUser } = useContext(UserContext);
 
   return (
     <div className="shadow-lg">
@@ -36,7 +38,7 @@ function Header() {
                   : setLoginBtn("Login");
               }}
             >
-              {loginBtn}
+              {loggedInUser}
             </button>
           </ul>
         </nav>
