@@ -1,5 +1,5 @@
 import myImage from "../utils/images/food-logo.png";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 
