@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 
 function Header() {
-  const [loginBtn, setLoginBtn] = useState("Login");
   const { loggedInUser } = useContext(UserContext);
 
   return (
@@ -28,18 +27,7 @@ function Header() {
             <li className="p-2 font-bold text-lg text-green-600 ">
               <Link to="/grocery">Grocery</Link>
             </li>
-            <button
-              className={`font-bold ${
-                loginBtn === "Logout" ? "text-red-600" : "text-blue-500"
-              } ml-2 text-lg`}
-              onClick={() => {
-                loginBtn === "Login"
-                  ? setLoginBtn("Logout")
-                  : setLoginBtn("Login");
-              }}
-            >
-              {loggedInUser}
-            </button>
+            <button className={`font-bold ml-2 text-lg`}>{loggedInUser}</button>
           </ul>
         </nav>
       </div>
