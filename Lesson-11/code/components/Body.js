@@ -14,7 +14,7 @@ function Body() {
   const [loginBtn, setLoginBtn] = useState("Login");
   const [loginInput, setLoginInput] = useState();
 
-  const { loggedInUser, setUserName } = useContext(UserContext);
+  const { setUserName } = useContext(UserContext);
 
   const FreeDelivery = WithLabel(ResCard);
 
