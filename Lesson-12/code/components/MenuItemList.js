@@ -1,6 +1,14 @@
 import { MENU_ITEM_API } from "../utils/constants";
+import { addItem, clearCart } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 
 const MenuItemList = ({ items }) => {
+  const dispatch = useDispatch();
+
+  function addToCartHandeller(item) {
+    dispatch(addItem(item));
+  }
+
   return (
     <div>
       {items.map((item) => (
@@ -20,7 +28,10 @@ const MenuItemList = ({ items }) => {
               className="w-[7rem] h-[5rem] object-cover rounded-lg"
               src={MENU_ITEM_API + item.card.info.imageId}
             />
-            <button className="bg-green-100 text-center rounded-md w- px-2 py-1  text-green-600 text-sm font-bold shadow-lg absolute mt-16">
+            <button
+              className="bg-green-100 text-center rounded-md w- px-2 py-1  text-green-600 text-sm font-bold shadow-lg absolute mt-16"
+              onClick={() => addToCartHandeller(item)}
+            >
               ADD +
             </button>
           </div>
