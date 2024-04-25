@@ -95,6 +95,7 @@ function Body() {
 
         <div className="m-4">
           <input
+            data-testId="searchInput"
             className="bg-gray-100 border-gray-300 p-[4px] border-2 rounded-tl-full rounded-bl-full"
             type="text"
             value={searchInput}

@@ -5,7 +5,10 @@ function ResCard(props) {
   const { name, locality, cuisines, avgRating, cloudinaryImageId, id } =
     resData.info;
   return (
-    <div className="w-[17rem] p-6 rounded-lg transition-transform duration-300 ease-in-out hover:transform hover:scale-110">
+    <div
+      data-testid="resCard"
+      className="w-[17rem] p-6 rounded-lg transition-transform duration-300 ease-in-out hover:transform hover:scale-110"
+    >
       <img
         className="rounded-lg w-[700px] h-[150px] object-cover"
         alt="Restaurant Image"
